@@ -3,7 +3,7 @@ Comp 124: Homework 1
 
 Setup
 ---
-Follow the "Cloning a repo" section of the [IntelliJ setup doc](https://docs.google.com/document/d/1qeGNcpNbvZn5zm3K4YJZunaMo0uqF3552jZ5L6KoGME/edit?usp=sharing) to fork this repository.
+Follow the "Cloning a repo" section of the [IntelliJ setup doc](https://docs.google.com/a/macalester.edu/document/d/15F5NFm5hoibSV9E5IDO8icvp3ddiJ4cjQ-dXgCP6S9Y/edit?usp=sharing) to fork this repository.
 The URL for this repo is in the right hand side of this page.
 
 
