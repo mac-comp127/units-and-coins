@@ -23,7 +23,7 @@ I have created a `UnitConversions` class that converts between Sheppey and miles
 Problem 2: Minimize Coins
 -------------------------
 
-Please complete programming problem 2.9 on page 77 in the Java Foundations book (The problem begins with "Write an application that prompts for and reads a double value representing a monetary amount.")
+Please complete programming problem PP2.9 on page 71 in the Java Foundations book (The problem begins with "Write an application that prompts for and reads a double value representing a monetary amount.")
 
 Submitting your assignment
 ---
