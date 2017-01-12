@@ -19,16 +19,34 @@ I have created a `UnitConversions` class that converts between Sheppey and miles
    and forth between two units of your choice.
 3. Add tests for your new methods to `UnitConversionsTest`.
 
-
-Problem 2: Minimize Coins
--------------------------
-
-Please complete programming problem PP2.9 on page 71 in the Java Foundations book (The problem begins with "Write an application that prompts for and reads a double value representing a monetary amount.")
-
-Submitting your assignment
----
-Make sure you push your results to your private repo.
-
 Acknowledgements:
 ---
 Paul Cantrell developed the unit conversions assignment using Fahrenheit and Celsius. Bret Jackson updated it to use Sheppy. :stuck_out_tongue_winking_eye:
+
+
+Problem 2: Minimize Bills and Coins
+-----------------------------------
+
+You will be writing a new class called **MoneyCalculator**. Follow the coding guidelines document provided on moodle when documenting this class and choosing variable names. Remember that you should create a main method as the starting point for your program.
+
+The purpose of your program is to take a double value from the user that represents a monetary amount, such as 17.89, and print back out the least number of each type of US bill and coin needed to represent that amount, starting with the highest. As a simplification, assume that the ten dollar bill is the maximum size bill that you have to work with.
+
+For example, if the user enters 47.63, your program should print:
+
+    4 ten dollar bills
+    1 five dollar bill
+    2 one dallar bills
+    2 quarters
+    1 dime
+    0 nickels
+    3 pennies
+
+**Testing your program**: This program is an example of a program that must be tested using what we call *functional* testing, as opposed to the unit testing that you have done one previous problems. In this case, you test out your program by trying various amounts to insure that it is correct. Be sure that you try enough cases to ensure that all parts of your code solution execute. This means that you choose examples so that all parts of conditional if statements get tried and the possible range of amounts for each bill and coin get used. If you want to use the read-until-sentinal looping pattern in your main() so that you can continually try various amounts, you may certainly do that.
+
+Submitting your assignment
+---
+Make sure you add, commit, and push your results to your private repo.
+
+Acknowledgements:
+---
+This is problem PP2.9 on page 71 in the Java Foundations book
