@@ -43,10 +43,11 @@ For example, if the user enters 47.63, your program should print:
 
 **Testing your program**: This program is an example of a program that must be tested using what we call *functional* testing, as opposed to the unit testing that you have done one previous problems. In this case, you test out your program by trying various amounts to insure that it is correct. Be sure that you try enough cases to ensure that all parts of your code solution execute. This means that you choose examples so that all parts of conditional if statements get tried and the possible range of amounts for each bill and coin get used. If you want to use the read-until-sentinal looping pattern in your main() so that you can continually try various amounts, you may certainly do that.
 
-Submitting your assignment
----
-Make sure you add, commit, and push your results to your private repo.
-
 Acknowledgements:
 ---
 This is problem PP2.9 on page 71 in the Java Foundations book
+
+Submitting your assignment
+---
+Make sure you add, commit, and push all your code for both problems to your private repo. Come back here to github and check your fork's code to see that it has been updated.
+
