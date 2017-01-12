@@ -3,8 +3,6 @@
 ## Setup
 
 Follow the "Cloning a repo" section of the [IntelliJ setup doc](https://docs.google.com/a/macalester.edu/document/d/15F5NFm5hoibSV9E5IDO8icvp3ddiJ4cjQ-dXgCP6S9Y/edit?usp=sharing) to fork this repository.
-Use your browser to get the URL for this repo as you read this page.
-
 
 ## Problem 1: Unit Conversions
 
