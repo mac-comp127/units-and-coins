@@ -13,8 +13,10 @@ public class MoneyCalculator {
         String reply = "";
         float moneyInput;
 
-        while (true) {                    // read until sentinal pattern
-            // get imput amount
+        boolean done = false;             // sentinel
+
+        while (!done) {                    // read until sentinel pattern
+            // get input amount
             Scanner inputValue = new Scanner(System.in);
             System.out.print("Please enter a monetary value with no more than 2 places after the decimal: ");
             moneyInput = inputValue.nextFloat();
@@ -41,34 +43,22 @@ public class MoneyCalculator {
             int fives = tensRemainder / 5;
             int ones = tensRemainder % 5;
 
-            if (tens > 0) {
-                if (tens > 1) {
-                    System.out.println(tens + " ten dollar bills");
-                } else {
-                    System.out.println(tens + " ten dollar bill");
-                }
+            if (tens == 1) {
+                System.out.println(tens + " ten dollar bill");
             } else {
-                System.out.println("0 ten dollar bills");
+                System.out.println(tens + " ten dollar bills");
             }
 
-            if (fives > 0) {
-                if (fives > 1) {
-                    System.out.println(fives + " five dollar bills");
-                } else {
-                    System.out.println(fives + " five dollar bill");
-                }
+            if (fives == 1) {
+                System.out.println(fives + " five dollar bill");
             } else {
-                System.out.println("0 five dollar bill");
+                System.out.println(fives + " five dollar bills");
             }
 
-            if (ones > 0) {
-                if (ones > 1) {
-                    System.out.println(ones + " one dollar bills");
-                } else {
-                    System.out.println(ones + " one dollar bill");
-                }
+            if (ones == 1) {
+                System.out.println(ones + " one dollar bill");
             } else {
-                System.out.println("0 one dollar bills");
+                System.out.println(ones + " one dollar bills");
             }
 
             /////////////////////////////////////////////////
@@ -77,60 +67,44 @@ public class MoneyCalculator {
             int quarters = cents / 25;
             int remain = cents % 25;
 
-            if (quarters > 0) {
-                if (quarters > 1) {
-                    System.out.println(quarters + " quarters");
-                } else {
-                    System.out.println("1 quarter");
-                }
+            if (quarters == 1) {
+                System.out.println("1 quarter");
             } else {
-                System.out.println("0 quarters");
+                System.out.println(quarters + " quarters");
             }
 
             int dimes = remain /10;
-            if (dimes > 0) {
-                if (dimes > 1) {
-                    System.out.println(dimes + " dimes");
-                } else {
-                    System.out.println("1 dime");
-                }
+            if (dimes == 1 ) {
+                System.out.println("1 dime");
             } else {
-                System.out.println("0 dimes");
+                System.out.println(dimes + " dimes");
             }
 
             remain = remain % 10;
             int nickels = remain / 5;
-            if (nickels > 0) {
-                if (nickels > 1) {
-                    System.out.println(nickels + " nickels");
-                } else {
-                    System.out.println("1 nickel");
-                }
+            if (nickels == 1) {
+                System.out.println("1 nickel");
             } else {
-                System.out.println("0 nickels");
+                System.out.println(nickels + " nickels");
             }
 
             int pennies = remain % 5;
-            if (pennies > 0) {
-                if (pennies > 1) {
-                    System.out.println(pennies + " pennies");
-                } else {
-                    System.out.println(" 1 penny");
-                }
+            if (pennies == 1 ) {
+                System.out.println("1 penny");
             } else {
-                System.out.println("0 pennies");
+                System.out.println(pennies + " pennies");
             }
 
 
             System.out.println();
 
             // ask for another Y/N
-            // if answered N or n, break
+            // if answered N or n, set sentinel
             Scanner yesNo = new Scanner(System.in);
             System.out.println("Do you wish to enter another monetary value? [Y/N] ");
             reply = yesNo.nextLine();
             if (reply.equalsIgnoreCase("N")) {        ///!!!!! This is in Ch. 3, p. 81
-                break;
+                done = true;
             }
         }
 
