@@ -16,10 +16,20 @@ package edu.macalester.comp124.hw1;
 public class UnitConversions {
 
     public static double sheppeyToMiles(double sheppey) {
-        return 0.0;
+        return sheppey * 7.0/8;
     }
 
     public static double milesToSheppey(double miles) {
-        return 0.0;
+        return miles / (7.0/8);
+    }
+
+    // This is just one example of a unit they might choose. If you want to be sure the student didn't make the unit up
+    // then you will likely have to google it. The key to grading this is consistency (*5 matches up with /5)
+    public static double beardSecondsToNanoMeters(double beardSeconds) {
+        return beardSeconds*5;
+    }
+
+    public static double nanoMetersToBeardSeconds(double nanoMeters) {
+        return nanoMeters/5;
     }
 }
