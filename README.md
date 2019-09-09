@@ -1,8 +1,8 @@
-# Comp 124: Homework 1
+# Comp 127: Homework 1
 
 ## Setup
 
-Follow the "Cloning a repo" section of the [IntelliJ setup doc](https://docs.google.com/a/macalester.edu/document/d/15F5NFm5hoibSV9E5IDO8icvp3ddiJ4cjQ-dXgCP6S9Y/edit?usp=sharing) to fork this repository.
+Follow the instructions in the [IntelliJ setup doc](https://docs.google.com/document/d/1N1R8BBKMJBdFEC-iLMTUoAgUC-Ax6pT6P1aSQ8BduQc/edit#heading=h.x8g2dpj52ulr) to setup this repository. You probably already followed steps 1-3 if you are seeing this!
 
 ## Problem 1: Unit Conversions  (~6 points)
 
@@ -42,7 +42,10 @@ For example, if the user enters 47.63, your program should print:
 
 You must use a read-until-sentinel loop pattern to keep asking the user if they wish to enter a new value (Y/N). Your program should always complete one calculation as above before asking whether they want to try again.
 
-**Hint**: Rounding up or down from float to its nearest int requires use of the round() method in the Math package.
+**Hint**: There are no coins for fractions of a cent.
+You can give somebody $3.50, but not $3.501. 
+Because of this you should **represent money using an int that records the number of cents**.
+A dollar should be represented as 100, and $3.50 should be represented as 350. 
 
 **Testing your program**: This program is an example of a program that must be tested using what we call *functional* testing, as opposed to the unit testing that you have done on previous problems. In this case, you test out your program by trying various amounts to insure that it is correct. Be sure that you try enough cases to ensure that all parts of your code solution execute. This means that you choose examples so that all parts of conditional if statements get tried and the possible range of amounts for each bill and coin get used. 
 
@@ -51,7 +54,7 @@ For this homework we will provide some pseudocode so that you can see how writin
 
     While not done:
         Ask user for input monetary value with not more than two decimal places
-        Split input value into dollars (left of decimal) and cents (right of decimal)
+        Convert to cents and split into logical dollars and cents
         Determine bill breakdown of dollars and print a line for each bill (ten, five, one)
         Determine coin breakdoen of cents and print a line for each coin (quarter, dime, nickel, penny)
         Get user input whether they wish to continue with another value
@@ -59,7 +62,7 @@ For this homework we will provide some pseudocode so that you can see how writin
 
 ### Acknowledgements:
 
-This is based on problem PP2.9 on page 71 in the Java Foundations book, with some additions for Macalester COMP 124.
+This is based on problem PP2.9 on page 71 in the Java Foundations book, with some additions for Macalester COMP 127.
 
 ## Submitting your assignment
 
