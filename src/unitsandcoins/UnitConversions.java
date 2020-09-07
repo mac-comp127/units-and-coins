@@ -1,4 +1,4 @@
-package edu.macalester.comp127.hw1;
+package unitsandcoins;
 
 /**
  * Unit Conversions for humorous units of measurement.

@@ -1,8 +1,8 @@
-package edu.macalester.comp127.hw1;
+package unitsandcoins;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class UnitConversionsTest {
     @Test
