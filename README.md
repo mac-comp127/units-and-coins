@@ -42,9 +42,15 @@ For example, if the user enters 47.63, your program should print:
 
 You must use a read-until-sentinel loop pattern to keep asking the user if they wish to enter a new value (Y/N). Your program will always complete one calculation as above before asking whether they want to try again.
 
-Note that there are no coins for fractions of a cent. You can give somebody $3.50, but not $3.501. 
+Note that there are no coins for fractions of a cent. You can give somebody $3.50, but not $3.501. For this assignment, you may assume that the user always enters a valid amount of money.
 
 **Note:** Floating point numbers are approximations, and subject to surprising rounding errors. Because of this, you should **never use floating point types to perform monetary calculations that need to be precise** — not in this assignment, not ever! Instead, for this assignment, represent money using an int that records the number of cents. For example, a dollar would be represented as 100, and $3.50 would be represented as 350. 
+
+Hints:
+
+- Pay close attention to the singulars and plurals in the output above. Study each line.
+- Be sure to round properly when you convert from floating point types to integer types. For example, `1.05` represented as a float comes out to `1.04999995`. Does your code give the correct answer for numbers like this?
+- Java’s `Scanner` class has some surprising behavior. If you encounter something puzzling or vexing, ask your preceptors and instructor for a hint!
 
 **Testing your program**: Because this program takes its input straight from the user typing and prints its output straight back to the screen, it does not lend itself to unit testing. Instead, you will need to use manual interactive testing. Test out your program by trying various amounts to insure that it is correct. Be sure that you try enough cases to ensure that all parts of your code solution execute. This means that you choose examples so that all parts of conditional if statements get tried and the possible range of amounts for each bill and coin get used.
 
@@ -56,7 +62,6 @@ For this homework we will provide some pseudocode, so that you can see how writi
 - While not done:
     - Ask user to input monetary value (assume no more than two decimal places)
     - Convert double input to int cents
-        - Be sure to round properly! For example, `1.05` represented as a float comes out to `1.04999995`
     - Determine bill breakdown of dollars, and print a line for each bill (ten, five, one)
     - Determine coin breakdown of cents, and print a line for each coin (quarter, dime, nickel, penny)
     - Get user input whether they wish to continue with another value
