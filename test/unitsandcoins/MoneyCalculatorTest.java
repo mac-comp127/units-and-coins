@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MoneyCalculatorTest {
     @Test
-    public void testOneCent() {
+    public void testSimpleAmount() {
         assertEquals(
             List.of("1 penny"),
             MoneyCalculator.convertToCash(0.01)

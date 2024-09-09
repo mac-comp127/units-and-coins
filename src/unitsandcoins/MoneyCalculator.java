@@ -9,103 +9,110 @@ public class MoneyCalculator {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter an amount of money: $");
-        double amount = scanner.nextDouble();
+        double amount = scanner.nextDouble();  // Grab first number on input line
         scanner.nextLine();  // Ignore remainder of line
 
-        List<String> cash = convertToCash(amount);
+        List<String> cashDenominations = convertToCash(amount);
 
         System.out.println("In currency, this is:");
-        for (String message : cash) {
-            System.out.println(message);
+        for (String denomination : cashDenominations) {
+            System.out.println("  " + denomination);  // Each denomination on a separate line
         }
 
         scanner.close();
     }
 
+    /**
+     * Lists the minimal combination of US bills and coins that add up to a given dollar amount.
+     * 
+     * @param amount An amount in US dollars. Must be a multiple of 0.01.
+     * @return A list of counts of cash denomations, e.g. "2 dimes", with one denomination
+     *         per list element.
+     */
     public static List<String> convertToCash(double amount) {
-        double amountRemaining = amount;
-        List<String> cash = new ArrayList<>();
+        double amountRemaining = amount;  // Tracks amount left after applying each denomination
+        List<String> results = new ArrayList<>();  // Accumulates denominations
 
-        int hundreds = (int) (amountRemaining / 100);
-        if (hundreds == 1) {
-            cash.add(hundreds + " hundred");
+        int hundreds = (int) (amountRemaining / 100);  // How many hundreds in amountRemaining?
+        if (hundreds == 1) {  // Singular, plural, or none?
+            results.add(hundreds + " hundred");
         } else if (hundreds != 0) {
-            cash.add(hundreds + " hundreds");
+            results.add(hundreds + " hundreds");
         }
-        amountRemaining %= 100;
+        amountRemaining %= 100;  // Compute amount left after removing hundreds
 
         int fifties = (int) (amountRemaining / 50);
         if (fifties == 1) {
-            cash.add(fifties + " fifty");
+            results.add(fifties + " fifty");
         } else if (fifties != 0) {
-            cash.add(fifties + " fifties");
+            results.add(fifties + " fifties");
         }
         amountRemaining %= 50;
 
         int twenties = (int) (amountRemaining / 20);
         if (twenties == 1) {
-            cash.add(twenties + " twenty");
+            results.add(twenties + " twenty");
         } else if (twenties != 0) {
-            cash.add(twenties + " twenties");
+            results.add(twenties + " twenties");
         }
         amountRemaining %= 20;
 
         int tens = (int) (amountRemaining / 10);
         if (tens == 1) {
-            cash.add(tens + " ten");
+            results.add(tens + " ten");
         } else if (tens != 0) {
-            cash.add(tens + " tens");
+            results.add(tens + " tens");
         }
         amountRemaining %= 10;
 
         int fives = (int) (amountRemaining / 5);
         if (fives == 1) {
-            cash.add(fives + " five");
+            results.add(fives + " five");
         } else if (tens != 0) {
-            cash.add(fives + " fives");
+            results.add(fives + " fives");
         }
         amountRemaining %= 5;
 
         int ones = (int) (amountRemaining / 1);
         if (ones == 1) {
-            cash.add(ones + " one");
+            results.add(ones + " one");
         } else if (ones != 0) {
-            cash.add(ones + " ones");
+            results.add(ones + " ones");
         }
         amountRemaining %= 1;
 
         int quarters = (int) (amountRemaining / 0.25);
         if (quarters == 1) {
-            cash.add(quarters + " quarter");
+            results.add(quarters + " quarter");
         } else if (quarters != 0) {
-            cash.add(quarters + " quarters");
+            results.add(quarters + " quarters");
         }
         amountRemaining %= 0.25;
 
         int dimes = (int) (amountRemaining / 0.10);
         if (dimes == 1) {
-            cash.add(dimes + " dime");
+            results.add(dimes + " dime");
         } else if (dimes != 0) {
-            cash.add(dimes + " dimes");
+            results.add(dimes + " dimes");
         }
         amountRemaining %= 0.10;
 
         int nickels = (int) (amountRemaining / 0.05);
         if (nickels == 1) {
-            cash.add(nickels + " nickel");
+            results.add(nickels + " nickel");
         } else if (nickels != 0) {
-            cash.add(nickels + " nickels");
+            results.add(nickels + " nickels");
         }
         amountRemaining %= 0.05;
 
         int pennies = (int) (amountRemaining / 0.01);
         if (pennies == 1) {
-            cash.add(pennies + " penny");
+            results.add(pennies + " penny");
         } else if (pennies != 0) {
-            cash.add(pennies + " pennies");
+            results.add(pennies + " pennies");
         }
         amountRemaining %= 0.01;
 
-        return cash;
+        return results;
     }
 }
