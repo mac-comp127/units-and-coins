@@ -167,7 +167,7 @@ A better approach: don’t do that! Instead, we will do the following:
 - Change the code to use `int`.
 - Make sure our new test passes now.
 
-### Part 2d: Goodbye, repetitive code!
+### Part 2d: Create the helper function
 
 We are going to extract the repeating pattern in `convertToCash` into a new helper function, `computeDenomination`, so that instead of an almost-repeating chunk of code, it becomes a series of calls to the same function. (If you took COMP 123 at Mac, you might have done the “Row, Row, Row Your Code” activity. This is very similar.)
 
@@ -203,6 +203,10 @@ Try moving the code for _only_ the hundreds into your new helper. Not everything
 
 Once you’ve done that, run the tests. They should still all pass.
 
+Commit your work.
+
+### Part 2e: Goodbye, repetitive code!
+
 Now…
 
 **🌈🦋🦄 ¡¡¡THIS IS THE BEST PART OF THE ASSIGNMENT!!! 🦄🦋🌈**
@@ -213,7 +217,7 @@ When you are done, all the tests should still pass.
 
 Commit your work.
 
-### Part 2e: Fix the bug
+### Part 2f: Fix the bug
 
 Now, at last, we can fix the floating point bug by switching to an integer type. Remember that primitive types have maximum values. If we use `int`, then the code will break for any amount over $21,474,836.47, so let’s use `long` instead.
 
