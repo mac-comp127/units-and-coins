@@ -33,7 +33,7 @@ Paul Cantrell developed the unit conversions assignment using Fahrenheit and Cel
 
 > **Note:** It it best to do this portion of the assignment **after** the Unit Testing in-class activity. If you started early on the homework, (1) nice!! and (2) wait for that activity before getting too far into this part of the homework.
 
-`MoneyCalculator` contains code that breaks a given amount of money into US cash currency. The best way to see what it does is to run it: open up `MoneyCalculator.java`, which has a `main` method, and run it. Type in an amount of money (You might have to click in the Terminal pane to be able to type), and watch what it does. Play with it until you think you understand what this code is supposed to do.
+`MoneyCalculator` contains code that breaks a given amount of money into US cash currency. The best way to see what it does is to run it: open up `MoneyCalculator.java`, which has a `main` method, and run it. Type in some amount of money. (You might have to click in the Terminal pane to be able to type.) Watch what the program does with the input you give it. Play with it until you think you understand what this code is supposed to do.
 
 Unfortunately, `MoneyCalculator` is full of bugs.
 
@@ -130,11 +130,11 @@ Commit your progress with Git.
 
 ### Part 2c: Finding the second bug
 
-What should the answer be for $0.29? Thin, then test it: run the main method in `MoneyConverter`, and input 0.29.
+What should the answer be for $0.29? Think, then test it: run the main method in `MoneyConverter`, and input 0.29.
 
 Huh?!
 
-If you’d like, take a minute to make a guess. You can add a print statement, or even find the source debugger in VS Code and step through the code. (We’ll look at that in class at some point.)
+If you’d like, take a minute to make a guess what’s going on. You can add a print statement, or even find the source debugger in VS Code and step through the code. (We’ll look at the debugger in class at some point. Don’t worry if you don’t know about it yet.)
 
 Once you have a guess, or you’ve explored a bit, or you just can’t even imagine where to start, here is the answer:
 
@@ -167,20 +167,25 @@ A better approach: don’t do that! Instead, we will do the following:
 - Change the code to use `int`.
 - Make sure our new test passes now.
 
+That’s a lot. Let’s take it step by step.
+
 ### Part 2d: Create the helper function
 
-We are going to extract the repeating pattern in `convertToCash` into a new helper function, `computeDenomination`, so that instead of an almost-repeating chunk of code, it becomes a series of calls to the same function. (If you took COMP 123 at Mac, you might have done the “Row, Row, Row Your Code” activity. This is very similar.)
+We are going to extract the repeating pattern in `convertToCash` into a new helper function, `computeDenomination`. Then, instead of an almost-repeating chunk of code, `convertToCash` will become a series of calls to the same function. (If you took COMP 123 at Mac, you might have done the “Row, Row, Row Your Code” activity. This is very similar.)
 
 Look at the repeating pattern in `convertToCash`. Think about what parameters the helper function is going to need. What changes between each repetition? What stays the same? What changes are just changes to variable names, versus changes to data / constants? What variables can be _local_ variables for the function? What variables need to live on between calls to the function?
 
-Here is one hint: you can return the updated value of `amountRemaining`, and pass in `result` every time you call the function so the function can add to it.
+Here are two hints:
+
+- You can return the updated value of `amountRemaining`.
+- You can pass in `result` as a parameter every time you call the function, so that the function can add to it.
 
 Make a list of parameters you think you will need, and the method’s return value.
 
 These are all tricky questions! Think about it, come up with a list, _then_ check your answer:
 
 <details>
-  <summary>Parameters and return value for `computeDenomination`</summary>
+  <summary>Parameters and return value for <code>computeDenomination</code></summary>
 
   Parameters:
 
@@ -211,7 +216,7 @@ Now…
 
 **🌈🦋🦄 ¡¡¡THIS IS THE BEST PART OF THE ASSIGNMENT!!! 🦄🦋🌈**
 
-…replace _all of the repeated code_ with calls to `computeDenomination`. You get to _delete a whole lot of code_. Enjoy!!
+…replace _all of the repeated code_ with calls to `computeDenomination`. You get to _delete a whole lot of code_. Enjoy!! Deleting code is one of the best parts of programming.
 
 When you are done, all the tests should still pass.
 
@@ -219,7 +224,7 @@ Commit your work.
 
 ### Part 2f: Fix the bug
 
-Now, at last, we can fix the floating point bug by switching to an integer type. Remember that primitive types have maximum values. If we use `int`, then the code will break for any amount over $21,474,836.47, so let’s use `long` instead.
+Now, at last, we can fix the floating point bug by switching to an integer type. Remember that primitive types have maximum values. If we use `int`, then the code will break for any amount over $21,474,836.47, so let’s use `long` instead. (It’s good up to $92,233,720,368,547,758.07. Seems like that should suffice.)
 
 Find every instance of `double` in `MoneyCalculator`, and replace it with `long`. Pay attention as you go! Don’t miss anything!
 
@@ -230,6 +235,8 @@ Find every instance of `double` in `MoneyCalculator`, and replace it with `long`
 You will also need to update the tests, which now need to provide cents instead of dollars as inputs. Once you change that — and _only_ that — in the tests, they should all pass again.
 
 Commit _and push_ your work.
+
+Congratulations! You just made some software better.
 
 
 ### Acknowledgements:
