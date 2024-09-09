@@ -14,12 +14,11 @@ package unitsandcoins;
  *
  */
 public class UnitConversions {
-
+    /**
+     * Converts the given distance in sheppeys to the corresponding distance in miles.
+     */
     public static double sheppeyToMiles(double sheppey) {
-        return 0.0;
+        return 0;
     }
 
-    public static double milesToSheppey(double miles) {
-        return 0.0;
-    }
 }
