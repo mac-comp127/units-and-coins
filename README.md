@@ -130,7 +130,7 @@ Commit your progress with Git.
 
 ### Part 2c: Finding the second bug
 
-What should the answer be for $0.29? Think, then test it: run the main method in `MoneyConverter`, and input 0.29.
+What should the answer be for $0.29? Think, then manually test it: run the main method in `MoneyConverter`, and input 0.29.
 
 Huh?!
 
@@ -160,7 +160,7 @@ OK, given that, how could we fix this bug? Think for a moment then read about…
 
 That can work! But…ouch. Because `convertToCash` has such repetitive code, we are going to have to make that change over and over and over. And if we mess up even once, it could create an insidious bug that is hard to find — just like in part 2b.
 
-A better approach: don’t do that! Instead, we will do the following:
+A better approach: don’t do that! Instead, we will do the following (Not now! This is a preview!):
 
 - **Refactor** the existing code to remove the repetition. It will still use `double`, still do exactly what it does, but it will become much more concise, and much easier to make this change.
 - Add a test that for $0.29. Make sure it fails as expected.
@@ -223,6 +223,8 @@ When you are done, all the tests should still pass.
 Commit your work.
 
 ### Part 2f: Fix the bug
+
+First: add a test for $0.29. **Make sure this new test fails.** Our tests now check for the bug.
 
 Now, at last, we can fix the floating point bug by switching to an integer type. Remember that primitive types have maximum values. If we use `int`, then the code will break for any amount over $21,474,836.47, so let’s use `long` instead. (It’s good up to $92,233,720,368,547,758.07. Seems like that should suffice.)
 
