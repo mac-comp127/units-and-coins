@@ -26,7 +26,7 @@ In the `test/` directory, in `UnitConversionsTest`, there is a unit test for thi
 
 ### Acknowledgements:
 
-Paul Cantrell developed the unit conversions assignment using Fahrenheit and Celsius. Bret Jackson updated it to use Sheppy. :stuck_out_tongue_winking_eye:
+Paul Cantrell developed the unit conversions assignment using Fahrenheit and Celsius. Bret Jackson updated it to use Sheppey. :stuck_out_tongue_winking_eye:
 
 
 ## Part 2: Cash Chaos
