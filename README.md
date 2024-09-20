@@ -20,7 +20,7 @@ In the `test/` directory, in `UnitConversionsTest`, there is a unit test for thi
 2. Create a new method named `milesToSheppeys` to do the conversion in the other direction. Thing to check:
    - Make sure that you _add_ this new method and new test instead of _replacing_ the existing ones.
    - Be sure to add a documentation comment for your new method, like the one that appears just above `sheppeysToMiles`, formatted exactly the same way, but with the text updated so it correctly describes your new method.
-   - Make sure you have test for your new method, like the existing `testSheppeysToMiles`, with the name and the numbers changed as appropriate.
+   - Make sure you have a test for your new method, like the existing `testSheppeysToMiles`, with the name and the numbers changed as appropriate.
    - Make sure your new test passes!
    - Make sure _all_ methods and variables in your new code have accurate names.
 
