@@ -1,9 +1,20 @@
 # Homework 1: Units and Coins
 
+## Learning Goals
+
+- Get more practice using and writing unit tests.
+- Learn about the `%` operator if you haven’t already encountered it.
+- Learn about the perils of floating point arithmetic.
+- Practice two excellent software development patterns:
+  - refactoring _before_ making a change in order to make that change easier and less error-prone, and
+  - using unit tests to refactor with confidence.
+- Practice using Java’s method declaration syntax, and thinking about parameter and return types.
+- Experience the deep, soul-renewing pleasure of deleting code.
+
 ## Setup
 
-1. Make sure you have completed the [Installfest instructions](https://docs.google.com/document/d/1RJuwG1kIlrMOu8zurt7vIXsyJJwpuaTZSJqE8J6R_sc/edit#) successfully.
-1. Follow the steps in the [“Start the assignment” section](https://docs.google.com/document/d/1zbYG1SOJvar52_XmtKRq0yOuDNIHS5jjaDn8Rz3_m7Y/edit#) of the Homework / Lab Procedures document.
+1. Make sure you have completed the Installfest instructions (on our course web site) successfully.
+1. Follow the [Homework / Take-Home Exercise Procedure](https://comp127.innig.net/resources/take-home-procedure/).
 
 ## Part 1: Sheppeys
 
@@ -240,11 +251,11 @@ Commit _and push_ your work.
 
 Congratulations! You just made some software better.
 
-
 ### Acknowledgements:
 
-This is based on problem PP2.9 on page 71 in the Java Foundations book, with some additions for Macalester COMP 127.
+This is based on problem PP2.9 on page 71 in _Java Foundations_ (Lewis / DePasquale / Chase, 4th edition), reworked by Paul Cantrell to focus on refactoring and floating point math.
+
 
 ## Submitting your assignment
 
-Follow the steps in the [“Save your progress with a commit” and “Submit the assignment by pushing”](https://docs.google.com/document/d/1zbYG1SOJvar52_XmtKRq0yOuDNIHS5jjaDn8Rz3_m7Y/edit#bookmark=id.ok7hybpqu919) sections of the homework procedure document.
+Please follow the [homework instructions](https://comp127.innig.net/resources/take-home-procedure/) on the course web site.
