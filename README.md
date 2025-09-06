@@ -5,6 +5,7 @@
 - Get more practice using and writing unit tests.
 - Learn about the `%` operator if you haven’t already encountered it.
 - Learn about the perils of floating point arithmetic.
+- Learn about the perils of excessively repetitive code.
 - Practice two excellent software development patterns:
   - refactoring _before_ making a change in order to make that change easier and less error-prone, and
   - using unit tests to refactor with confidence.
