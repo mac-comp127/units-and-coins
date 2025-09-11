@@ -71,7 +71,7 @@ Find the `convertToCash` method. Do you notice the repeating pattern? Somebody d
 Here are some hints (click one to reveal it):
 
 <details>
-   <summary><p>🔹 Hint about <code>(int) (amountRemaining / 100)</code></p></summary>
+   <summary>🔹 Hint about <code>(int) (amountRemaining / 100)</code></summary>
 
    The `(int)` is a type cast. It forces the result to be an int, rounding down if necessary.
 
@@ -81,7 +81,7 @@ Here are some hints (click one to reveal it):
 </details>
 
 <details>
-  <summary><p>🔹 Hint about <code>hundreds == 1</code> and <code>hundreds != 0</code></p></summary>
+  <summary>🔹 Hint about <code>hundreds == 1</code> and <code>hundreds != 0</code></summary>
 
   There is a comment that says “Singular, plural, or none?” in the code. It is describing three different situations the code needs to handle. What are those situations?
 
@@ -90,14 +90,14 @@ Here are some hints (click one to reveal it):
 
 
 <details>
-  <summary><p>🔹 Hint about <code>amountRemaining %= 100</code></p></summary>
+  <summary>🔹 Hint about <code>amountRemaining %= 100</code></summary>
 
   The `%` operator is the modulus operator. It means “remainder after division” (with some special rules about negative numbers). For example, `17 % 3 == 2` because if you divide 17 by 3, you get 5 with a remainder of 2.
 
   If `%` is an operator, then what is `%=`? What is `amountRemaining %= 100` a shortcut for?
 
   <details>
-    <summary><p>🔹 Answer</p></summary>
+    <summary>🔹 Answer</summary>
 
     amountRemaining = amountRemaining % 100
   </details>
@@ -105,7 +105,7 @@ Here are some hints (click one to reveal it):
   What is `768.0 % 100`?
 
   <details>
-    <summary><p>🔹 Answer</p></summary>
+    <summary>🔹 Answer</summary>
 
     68.0
   </details>
@@ -127,7 +127,7 @@ But what _does_ it print?
 See if you can find the bug, but **don’t fix it yet**. Just find it.
 
 <details>
-   <summary><p>🔹 Hint about where the bug is</p></summary>
+   <summary>🔹 Hint about where the bug is</summary>
 
    Look at the section of the code that deals with fives. There is a mistake in the repeating pattern. Looks like the person who was copying and pasting that pattern missed a spot.
 </details>
@@ -151,7 +151,7 @@ If you’d like, take a minute to make a guess what’s going on. You can add a 
 Once you have a guess, or you’ve explored a bit, or you just can’t even imagine where to start, here is the answer:
 
 <details>
-  <summary><p>🔹 An explanation of what the bug is</p></summary>
+  <summary>🔹 An explanation of what the bug is</summary>
 
   It’s a floating point thing. The type of `amountRemaining` is `double`. Floating point numbers are approximations, and subject to surprising rounding errors. Because of this, you should **never use floating point types to perform monetary calculations that need to be precise** — including calculations about money!
 
@@ -163,7 +163,7 @@ Once you have a guess, or you’ve explored a bit, or you just can’t even imag
 OK, given that, how could we fix this bug? Think for a moment then read about…
 
 <details>
-  <summary><p>🔹 The solution we’ll use in this homework</p></summary>
+  <summary>🔹 The solution we’ll use in this homework</summary>
 
   Instead of using a floating point type for doing currency computation, we'll use an integer type.
 
@@ -197,7 +197,7 @@ Make a list of parameters you think you will need, and the method’s return val
 These are all tricky questions! Think about it, come up with a list, _then_ check your answer:
 
 <details>
-  <summary><p>🔹 Parameters and return value for <code>computeDenomination</code></p></summary>
+  <summary>🔹 Parameters and return value for <code>computeDenomination</code></summary>
 
   Parameters:
 
@@ -211,6 +211,7 @@ These are all tricky questions! Think about it, come up with a list, _then_ chec
 
   - The new amount remaining
 </details>
+
 
 What are the **types** of all those parameters? (Remember, we are sticking with `double` for now: first refactor, _then_ fix the bug.)
 
