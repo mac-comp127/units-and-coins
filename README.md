@@ -172,10 +172,10 @@ OK, given that, how could we fix this bug? Think for a moment then read about…
 
 That can work! But…ouch. Because `convertToCash` has such repetitive code, we are going to have to make that change over and over and over. And if we mess up even once, it could create an insidious bug that is hard to find — just like in part 2b.
 
-A better approach: don’t do that! Instead, here is a plan for what we’re going to do. (Not yet! This is a plan for the steps to come!)
+A better approach: don’t do that! Instead, here is a plan for what we’re going to do. (Not yet! This is a plan for **all the steps to come**, not what you should do right away!)
 
 - **Refactor** the existing code to remove the repetition. It will still use `double`, still do exactly what it does, but it will become much more concise, and much easier to make this change.
-- Add a test that for $0.29. Make sure it fails as expected.
+- Add a test for $0.29. Make sure it fails as expected.
 - Change the code to use an integer type.
 - Make sure our new test passes now.
 
