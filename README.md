@@ -174,10 +174,10 @@ That can work! But…ouch. Because `convertToCash` has such repetitive code, we 
 
 A better approach: don’t do that! Instead, here is a plan for what we’re going to do. (Not yet! This is a plan for **all the steps to come**, not what you should do right away!)
 
-- **Refactor** the existing code to remove the repetition. It will still use `double`, still do exactly what it does, but it will become much more concise, and much easier to make this change.
-- Add a test for $0.29. Make sure it fails as expected.
-- Change the code to use an integer type.
-- Make sure our new test passes now.
+- First you will **refactor** the existing code to remove the repetition. It will still use `double`, still do exactly what it does, but it will become much more concise, and much easier to make this change.
+- You will then add a test for $0.29, and make sure it fails as expected.
+- You will change the code to use an integer type.
+- Finally, you will then make sure the new test passes with the change to integers.
 
 That’s a lot. Let’s take it step by step.
 
