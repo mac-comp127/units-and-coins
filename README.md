@@ -15,7 +15,7 @@
 ## Setup
 
 1. Make sure you have completed the Installfest instructions (on our course web site) successfully.
-1. Follow the [Homework / Take-Home Exercise Procedure](https://comp127.innig.net/resources/take-home-procedure/).
+1. Follow the [Homework / Take-Home Exercise Procedure](https://comp127.macalester.digital/latest/resources/take-home-procedure/).
 
 ## Part 1: Sheppeys
 
@@ -260,4 +260,4 @@ This is based on problem PP2.9 on page 71 in _Java Foundations_ (Lewis / DePasqu
 
 ## Submitting your assignment
 
-Please follow the [homework instructions](https://comp127.innig.net/resources/take-home-procedure/) on the course web site.
+Please follow the [homework instructions](https://comp127.macalester.digital/latest/resources/take-home-procedure/) on the course web site.
